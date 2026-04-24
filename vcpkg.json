@@ -1,0 +1,34 @@
+{
+  "name": "corefire24-atticus",
+  "version-string": "0.1.0",
+  "description": "Corefire24-based C++ foundation for the ATTICUS desktop AI control plane.",
+  "dependencies": [
+    "fmt",
+    "spdlog",
+    "nlohmann-json",
+    "tomlplusplus",
+    "yaml-cpp",
+    "sqlite3",
+    "sqlitecpp",
+    {
+      "name": "cpp-httplib",
+      "features": [
+        "openssl"
+      ]
+    }
+  ],
+  "features": {
+    "gui-qt": {
+      "description": "Future Qt desktop GUI layer. Not required for the core baseline.",
+      "dependencies": [
+        "qtbase"
+      ]
+    },
+    "tests": {
+      "description": "Test framework for ATTICUS C++ contract and unit tests.",
+      "dependencies": [
+        "catch2"
+      ]
+    }
+  }
+}
