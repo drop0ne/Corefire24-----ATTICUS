@@ -32,17 +32,27 @@
     "zlib",
     "zstd",
     "lz4",
-    "cli11",
-    "qtbase",
-    "qtsvg",
-    "catch2",
-    "benchmark"
+    "cli11"
   ],
   "features": {
+    "gui-qt": {
+      "description": "Qt desktop GUI layer for the future ATTICUS operator console. Kept optional so GUI dependencies cannot block the headless core.",
+      "dependencies": [
+        "qtbase",
+        "qtsvg"
+      ]
+    },
     "qt-tools": {
       "description": "Qt development tools for later GUI buildout.",
       "dependencies": [
         "qttools"
+      ]
+    },
+    "tests": {
+      "description": "Test and benchmark frameworks for ATTICUS C++ contract, unit, and performance tests.",
+      "dependencies": [
+        "catch2",
+        "benchmark"
       ]
     },
     "debug-ui": {
