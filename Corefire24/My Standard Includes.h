@@ -1,0 +1,27 @@
+#pragma once
+
+#include <iostream>
+#include <random>
+#include <windows.h>
+#include <thread>
+#include <stop_token>
+#include <atomic> 
+#include <mutex>
+#include <chrono>
+#include <stdexcept>
+#include <string>
+#include <cctype>
+#include <array>
+#include <vector>
+#include <algorithm>
+#include <limits>
+#include <any>
+#include <memory>
+#include <cstdio>
+#include <functional>
+#include <cmath>
+#include <cstdint>
+#include <iomanip>
+#include <conio.h>
+#include <cstdlib>
+#include <ranges>
