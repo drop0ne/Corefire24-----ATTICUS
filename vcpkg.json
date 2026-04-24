@@ -1,6 +1,7 @@
 {
   "name": "corefire24-atticus",
   "version-string": "0.1.0",
+  "builtin-baseline": "7147ac1294ef9647e8679e1183ac440a5d0a63b7",
   "description": "Corefire24-based C++ foundation for the ATTICUS desktop AI control plane.",
   "dependencies": [
     "fmt",
@@ -10,24 +11,50 @@
     "yaml-cpp",
     "sqlite3",
     "sqlitecpp",
+    "openssl",
+    "libsodium",
+    {
+      "name": "curl",
+      "features": [
+        "ssl"
+      ]
+    },
     {
       "name": "cpp-httplib",
       "features": [
         "openssl"
       ]
-    }
+    },
+    "boost-asio",
+    "boost-beast",
+    "boost-url",
+    "boost-uuid",
+    "zlib",
+    "zstd",
+    "lz4",
+    "cli11",
+    "qtbase",
+    "qtsvg",
+    "catch2",
+    "benchmark"
   ],
   "features": {
-    "gui-qt": {
-      "description": "Future Qt desktop GUI layer. Not required for the core baseline.",
+    "qt-tools": {
+      "description": "Qt development tools for later GUI buildout.",
       "dependencies": [
-        "qtbase"
+        "qttools"
       ]
     },
-    "tests": {
-      "description": "Test framework for ATTICUS C++ contract and unit tests.",
+    "debug-ui": {
+      "description": "Immediate-mode internal debug UI tools. Not part of the primary operator console.",
       "dependencies": [
-        "catch2"
+        "imgui"
+      ]
+    },
+    "websocket": {
+      "description": "WebSocket transport support for future streaming/control-plane channels.",
+      "dependencies": [
+        "websocketpp"
       ]
     }
   }
