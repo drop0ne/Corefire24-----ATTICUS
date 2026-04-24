@@ -237,15 +237,9 @@ void cfc::Startscreen::generateMainMenu(const std::vector<int>& stateData) {
 
 	print("CoreFireCode 2024 edition\n", Green);
 	print("\n\nMain Menu\n\n", DefaultWhite);
-	print("Option", stateData.at(Option), " 1 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " CannabisCalculator\n", stateData.at(Program));
-	print("Option", stateData.at(Option), " 2 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Calculation of Power Loss\n", stateData.at(Program));
-	print("Option", stateData.at(Option), " 3 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Number Gussing Game\n", stateData.at(Program));
-	print("Option", stateData.at(Option), " 4 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Quiz\n", stateData.at(Program));
-	print("Option", stateData.at(Option), " 5 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Hangman\n", stateData.at(Program));
 	print("Option", stateData.at(Option), " 6 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Default Menu Theme\n", stateData.at(Program));
 	print("Option", stateData.at(Option), " 7 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Random Menu Theme\n", stateData.at(Program));
 	print("Option", stateData.at(Option), " 8 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Rainbow Effect\n", stateData.at(Program));
-	print("Option", stateData.at(Option), " 9 ", stateData.at(ProgramID), "-", stateData.at(Symbols), " Solitaire\n", stateData.at(Program));
 	print("\nHold ", Gray, "esc", LightRed, " to exit\n\n", Gray, "", Black);
 }
 

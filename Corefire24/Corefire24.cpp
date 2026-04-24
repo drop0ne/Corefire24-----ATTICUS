@@ -16,11 +16,10 @@ int main() {
 	while (!function.check_if_ExitRequested()) {
 		switch (function.mainMenuLogic())
 		{
-		
 		case 6: function.menuTheme(/*enum*/defaultTheme); break;
 		case 7: function.menuTheme(/*enum*/RandomTheme); break;
 		case 8: function.menuTheme(/*enum*/RainbowTheme); break;
-		default: function.pause("\a\nCommand must be intager from 1 - 9\n", function.getMainMenuState().at(/*enum eMainMenu_State_ID*/ErrorMessage));
+		default: function.pause("\a\nInvalid Input\n", function.getMainMenuState().at(/*enum eMainMenu_State_ID*/ErrorMessage));
 			break;
 		}
 	}
