@@ -154,17 +154,11 @@
   <ItemGroup>
     <ClCompile Include="Corefire24.cpp" />
     <ClCompile Include="BaseClass.cpp" />
-    <ClCompile Include="Hangman.cpp" />
-    <ClCompile Include="MyGames.cpp" />
-    <ClCompile Include="Solitaire.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Hangman.h" />
     <ClInclude Include="MyEnum.h" />
     <ClInclude Include="BaseClass.h" />
-    <ClInclude Include="MyGames.h" />
     <ClInclude Include="My Standard Includes.h" />
-    <ClInclude Include="Solitaire.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

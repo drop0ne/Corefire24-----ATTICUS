@@ -11,6 +11,30 @@ cfc::CoreComponents::CoreComponents() : console_HWND(), topLeft({ 0, 0 }) {
 	}
 }
 
+//************************************************************************************************************************************************************/
+// NumberGenerator
+/*************************************************************************************************************************************************************/
+
+cfc::NumberGenerator::NumberGenerator()
+	: rd(),
+	generator(rd())
+{
+}
+
+cfc::NumberGenerator::~NumberGenerator() = default;
+
+int cfc::NumberGenerator::getRandomNumber(const int min, const int max)
+{
+	if (min > max)
+	{
+		throw std::invalid_argument("NumberGenerator::getRandomNumber min cannot be greater than max");
+	}
+
+	std::uniform_int_distribution<int> distribution(min, max);
+	return distribution(generator);
+}
+
+
 // Clear the console screen using Windows API for better performance and security
 inline void cfc::CoreComponents::clearScreen() {
 	COORD topLeft = { 0, 0 };
@@ -56,8 +80,6 @@ inline void cfc::CoreComponents::print(const std::string& data, const bool& use_
 	{
 		case true:	std::cout << data << std::endl;	break;
 		case false:	std::cout << data; break;
-	default:
-		break;
 	}
 }
 inline void cfc::CoreComponents::print(const std::string& data, const int set_text_color, const bool& use_std_endl) {
@@ -66,8 +88,6 @@ inline void cfc::CoreComponents::print(const std::string& data, const int set_te
 	{
 		case true:	std::cout << data << std::endl;	break;
 		case false:	std::cout << data; break;
-	default:
-		break;
 	}
 }
 inline void cfc::CoreComponents::print(const std::string& data, const int textColor) {
